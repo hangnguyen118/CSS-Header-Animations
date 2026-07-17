@@ -1,9 +1,40 @@
 :root {
   font-family: sans-serif;
   font-size: 15px;
+
+  --primary-0: #f8fcff;
+  --primary-10: #eaf7ff;
+  --primary-20: #d3efff;
+  --primary-30: #b4e4ff;
+  --primary-40: #7ac9fe;
+  --primary-50: #0ea5e9;
+  --primary-60: #0083ce;
+  --primary-70: #0069a6;
+  --primary-80: #24536e;
+  --primary-90: #12384f;
+  --primary-100: #072235;
+  --primary-rgb: 0 131 206;
+
+  --color-page: #eee;
+  --color-surface: white;
+  --color-text: #111827;
+  --color-link: #585858;
+  --color-muted: #c0c0c1;
+  --color-link-hover: var(--primary-60);
+  --color-fill-soft: var(--primary-30);
+  --color-fill: var(--primary-40);
+  --color-fill-strong: var(--primary-80);
+  --color-purple: #7c00ce;
+  --color-purple-soft: #dab4ff;
+  --color-green: #00ce4c;
+  --color-green-soft: #b4ffd3;
+  --shadow-card:
+    0 0 0 1px rgba(0, 0, 0, 0.02), 0 10px 30px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
 }
 body {
-  background-color: #eee;
+  background-color: var(--color-page);
+  color: var(--color-text);
 }
 #app {
   display: flex;
@@ -26,11 +57,11 @@ ul {
 }
 li a {
   text-decoration: none;
-  color: rgb(88, 88, 88);
+  color: var(--color-link);
   padding: 3px;
 }
 li a:hover {
-  color: rgb(0, 131, 206);
+  color: var(--color-link-hover);
 }
 .title {
   margin-bottom: 20px;
@@ -39,7 +70,7 @@ li a:hover {
   margin: 0;
 }
 .title p {
-  color: #c0c0c1;
+  color: var(--color-muted);
   margin-bottom: 8px;
 }
 .title span {
@@ -49,27 +80,24 @@ li a:hover {
   border-radius: 20px;
 }
 .title .label1 {
-  color: rgb(0, 131, 206);
-  background-color: rgb(180, 228, 255);
+  color: var(--primary-60);
+  background-color: var(--primary-30);
 }
 .title .label2 {
-  color: rgb(124, 0, 206);
-  background-color: rgb(218, 180, 255);
+  color: var(--color-purple);
+  background-color: var(--color-purple-soft);
 }
 .title .label3 {
-  color: rgb(0, 206, 76);
-  background-color: rgb(180, 255, 211);
+  color: var(--color-green);
+  background-color: var(--color-green-soft);
 }
 .card {
   width: fit-content;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
-  background-color: white;
-  box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.02),
-    0 10px 30px rgba(0, 0, 0, 0.08),
-    0 2px 8px rgba(0, 0, 0, 0.04);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
 }
 .card-header {
   display: flex;
@@ -81,7 +109,7 @@ p {
   margin: 0;
 }
 .card-header p {
-  color: #c0c0c1;
+  color: var(--color-muted);
   margin-bottom: 20px;
 }
 .card-header span {
@@ -90,8 +118,8 @@ p {
   font-weight: 500;
   padding: 10px 12px;
   border-radius: 8px;
-  color: rgb(0, 131, 206);
-  background-color: rgb(180, 228, 255);
+  color: var(--primary-60);
+  background-color: var(--primary-30);
 }
 .wapper {
   display: grid;
